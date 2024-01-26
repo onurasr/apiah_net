@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AnaSayfa</title>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="~/Content/swiper-bundle.min.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="~/Content/homepage.css" />
+    <style>
+        body {
+            background-color: #292d33;
+        }
+    </style>
+  
+</head>
+<body>
+    <br />
+    <br />
+    
+        <section class="main swiper mySwiper">
+            <div class="wrapper swiper-wrapper">
+                <div class="slide swiper-slide">
+                    <img src="~/images/hero-carousel-1.jpg" alt="" class="image" />
+                    <div class="image-data">
+                        <span class="text">İnşaat alanlarınızı ada parsel ile hızlıca hesaplayıp yönetmek için hemen şimdi.</span>
+                        <h2>
+                            ADA PARSEL BİLGİSİ İLE<br />
+                            İNŞAAT ALANI HESAPLAMA
+                        </h2>
+                        <a href="@Url.Action("insaatHesaplamaGiris", "Home")" class="button">Hesapla</a>
+                    </div>
+                </div>
+                <div class="slide swiper-slide">
+                    <img src="~/images/hero-carousel-2.jpg" alt="" class="image" />
+                    <div class="image-data">
+                        <span class="text">İnşaat sektörü, sürekli gelişen teknoloji ve artan projelerle birlikte daha karmaşık hale gelmektedir. Bu karmaşıklık, özellikle ada ve parsel bilgileri üzerinde doğru ve güncel verilere erişimle yakından ilişkilidir. İnşaat projelerinin başarısı, doğru arazi verilerine dayanarak etkili bir planlama ve yönetim süreci ile başlar. kullanıcıların, özellikle inşaat sektörü profesyonellerinin, arazi geliştiricilerinin ve planlama uzmanlarının ihtiyaçlarına odaklanarak, ada ve parsel bilgilerini kullanarak belediyelerden alınan verileri gösteren bir uygulamoa hemen şimdi E-İmar verilerini gör.</span>
+                        <h2>
+                            E-İMAR
+                        </h2>
+                        <a href="@Url.Action("eimar", "Home")" class="button">E-İmar</a>
+                    </div>
+                </div>
+                <div class="slide swiper-slide">
+                    <img src="~/images/hero-carousel-3.jpg" alt="" class="image" />
+                    <div class="image-data">
+                        <span class="text">Gördüğünüz hatalar için hemen biziimle iletişime geçin ve doğru  çözümleri geliştirelim</span>
+                        <h2>
+                            İLETİŞİM
+                        </h2>
+                        <a href="@Url.Action("Contact", "Home")" class="button">İletişim</a>
+                    </div>
+                </div>
+                <div class="slide swiper-slide">
+                    <img src="~/images/hero-carousel-4.jpg" alt="" class="image" />
+                    <div class="image-data">
+                        <span class="text">Bizim hakkımızda bilgilere ulaşıp geliştirmek istediğiniz projeler için hakkında ksımı</span>
+                        <h2>
+                            HAKKINDA
+                        </h2>
+                        <a href="@Url.Action("About", "Home")" class="button">HAKKINDA</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-button-next nav-btn"></div>
+            <div class="swiper-button-prev nav-btn"></div>
+            <div class="swiper-pagination"></div>
+        </section>
+    
+
+    <!-- Swiper JS -->
+    <script src="~/Scripts/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+</body>
+</html>

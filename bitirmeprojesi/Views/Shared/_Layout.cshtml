@@ -1,0 +1,242 @@
+﻿<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== CSS ===== -->
+    @Styles.Render("~/Content/customStyles.css")
+
+    <!-- ===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <title>Ada Parsel İle İnşaat Alanı Hesaplama</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen'></i>
+            <span class="logo navLogo"><a href="@Url.Action("index","Home")">APIAH</a></span>
+
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><a href="@Url.Action("index","Home")">APIAH</a></span>
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="@Url.Action("index","Home")">Anasayfa</a></li>
+                    <li><a href="@Url.Action("eimar", "Home")">E-İmar</a></li>
+                    <li><a href="@Url.Action("insaatHesaplamaGiris", "Home")">İnşaat Alanı Hesapla</a></li>
+                    <li><a href="@Url.Action("Contact", "Home")">İletişim</a></li>
+                    <li><a href="@Url.Action("About", "Home")">Hakkında</a></li>
+                </ul>
+            </div>
+
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+
+                <div class="searchBox">
+                    <div class="searchToggle">
+                        <i class='bx bx-x cancel'></i>
+                        <i class='bx bx-search search'></i>
+                    </div>
+
+                    <div class="search-field">
+                        <input type="text" placeholder="Search...">
+                        <i class='bx bx-search'></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <script>
+
+        const body = document.querySelector("body"),
+            nav = document.querySelector("nav"),
+            modeToggle = document.querySelector(".dark-light"),
+            searchToggle = document.querySelector(".searchToggle"),
+            sidebarOpen = document.querySelector(".sidebarOpen"),
+            siderbarClose = document.querySelector(".siderbarClose");
+
+        let getMode = localStorage.getItem("mode");
+        if (getMode && getMode === "dark-mode") {
+            body.classList.add("dark");
+        }
+
+        // js code to toggle dark and light mode
+        modeToggle.addEventListener("click", () => {
+            modeToggle.classList.toggle("active");
+            body.classList.toggle("dark");
+
+            // js code to keep user selected mode even page refresh or file reopen
+            if (!body.classList.contains("dark")) {
+                localStorage.setItem("mode", "light-mode");
+            } else {
+                localStorage.setItem("mode", "dark-mode");
+            }
+        });
+
+        // js code to toggle search box
+        searchToggle.addEventListener("click", () => {
+            searchToggle.classList.toggle("active");
+        });
+
+
+        //   js code to toggle sidebar
+        sidebarOpen.addEventListener("click", () => {
+            nav.classList.add("active");
+        });
+
+        body.addEventListener("click", e => {
+            let clickedElm = e.target;
+
+            if (!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")) {
+                nav.classList.remove("active");
+            }
+        });
+
+    </script>
+    @RenderBody();
+    <div class="container my-5">
+
+        <footer class="bg-custom text-center text-white">
+            <!-- Grid container -->
+            <div class="container p-4 pb-0">
+                <!-- Section: Social media -->
+                <section class="mb-4">
+                    <!-- Google -->
+                    <button class="btn btn-outline-light btn-floating m-1" onclick="showOptions1()">
+                        <i class="fab fa-google"></i>
+                    </button>
+                    <div id="optionsg" style="display: none;">
+                        <a class="btn btn-outline-light btn-floating m-1" href="mailto:emirhaneren0077@gmail.com" role="button" target="_blank">
+                            <i class="fab fa-google"></i> Emirhan Eren
+                        </a>
+                        <a class="btn btn-outline-light btn-floating m-1" href="mailto:onurasr@outlook.com" role="button" target="_blank">
+                            <i class="fab fa-google"></i> Onur Aşar
+                        </a>
+                    </div>
+                    <!-- Instagram -->
+                    <button class="btn btn-outline-light btn-floating m-1" onclick="showOptions2()">
+                        <i class="fab fa-instagram"></i>
+                    </button>
+                    <div id="optionsi" style="display: none;">
+                        <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/emrhnern7" role="button" target="_blank">
+                            <i class="fab fa-instagram"></i> Emirhan Eren
+                        </a>
+                        <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/onurasr" role="button" target="_blank">
+                            <i class="fab fa-instagram"></i> Onur Aşar
+                        </a>
+                    </div>
+                    <!-- Linkedin -->
+                    <button class="btn btn-outline-light btn-floating m-1" onclick="showOptions3()">
+                        <i class="fab fa-linkedin-in"></i>
+                    </button>
+                    <div id="optionsl" style="display: none;">
+                        <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/emrhnern7" role="button" target="_blank">
+                            <i class="fab fa-linkedin-in"></i> Emirhan Eren
+                        </a>
+                        <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/onurasr" role="button" target="_blank">
+                            <i class="fab fa-linkedin-in"></i> Onur Aşar
+                        </a>
+                    </div>
+                    <!-- Github -->
+                    <button class="btn btn-outline-light btn-floating m-1" onclick="showOptions4()">
+                        <i class="fab fa-github"></i>
+                    </button>
+                    <div id="optionsgi" style="display: none;">
+                        <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/emrhnern07" role="button" target="_blank">
+                            <i class="fab fa-github"></i> Emirhan Eren
+                        </a>
+                        <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/onurasr" role="button" target="_blank">
+                            <i class="fab fa-github"></i> Onur Aşar
+                        </a>
+                    </div>
+                    <!-- Bootstrap JS and Popper.js -->
+                    <!-- Bootstrap JS and Popper.js -->
+                    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.1/umd/popper.min.js"></script>
+                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+                    <script>
+                        function showOptions1() {
+                            var optionsDiv = document.getElementById('optionsg');
+                            if (optionsDiv.style.display === 'none') {
+                                optionsDiv.style.display = 'block';
+                            } else {
+                                optionsDiv.style.display = 'none';
+                            }
+                        }
+                    </script>
+
+                    <script>
+                        function showOptions2() {
+                            var optionsDiv = document.getElementById('optionsi');
+                            if (optionsDiv.style.display === 'none') {
+                                optionsDiv.style.display = 'block';
+                            } else {
+                                optionsDiv.style.display = 'none';
+                            }
+                        }
+                    </script>
+
+                    <script>
+                        function showOptions3() {
+                            var optionsDiv = document.getElementById('optionsl');
+                            if (optionsDiv.style.display === 'none') {
+                                optionsDiv.style.display = 'block';
+                            } else {
+                                optionsDiv.style.display = 'none';
+                            }
+                        }
+                    </script>
+
+                    <script>
+                        function showOptions4() {
+                            var optionsDiv = document.getElementById('optionsgi');
+                            if (optionsDiv.style.display === 'none') {
+                                optionsDiv.style.display = 'block';
+                            } else {
+                                optionsDiv.style.display = 'none';
+                            }
+                        }
+                    </script>
+
+                </section>
+                <!-- Section: Social media -->
+            </div>
+            <!-- Grid container -->
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                © 2024 Copyright<br />
+                <a class="text-white" href="@Url.Action("index")">ADA PARSEL İLE İNŞAAT ALANI HESAPLAMA</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+
+    </div>
+
+
+
+</body>
+</html>

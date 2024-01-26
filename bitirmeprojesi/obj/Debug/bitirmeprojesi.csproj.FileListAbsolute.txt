@@ -1,0 +1,208 @@
+E:\proje asp\bitirmeprojesi\bin\bitirmeprojesi.dll.config
+E:\proje asp\bitirmeprojesi\bin\bitirmeprojesi.dll
+E:\proje asp\bitirmeprojesi\bin\bitirmeprojesi.pdb
+E:\proje asp\bitirmeprojesi\bin\roslyn\csc.exe
+E:\proje asp\bitirmeprojesi\bin\roslyn\csc.exe.config
+E:\proje asp\bitirmeprojesi\bin\roslyn\csc.rsp
+E:\proje asp\bitirmeprojesi\bin\roslyn\csi.exe
+E:\proje asp\bitirmeprojesi\bin\roslyn\csi.exe.config
+E:\proje asp\bitirmeprojesi\bin\roslyn\csi.rsp
+E:\proje asp\bitirmeprojesi\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\proje asp\bitirmeprojesi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\proje asp\bitirmeprojesi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\proje asp\bitirmeprojesi\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\proje asp\bitirmeprojesi\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\proje asp\bitirmeprojesi\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\proje asp\bitirmeprojesi\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\proje asp\bitirmeprojesi\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\proje asp\bitirmeprojesi\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\proje asp\bitirmeprojesi\bin\roslyn\Microsoft.Managed.Core.targets
+E:\proje asp\bitirmeprojesi\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\proje asp\bitirmeprojesi\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\proje asp\bitirmeprojesi\bin\roslyn\System.AppContext.dll
+E:\proje asp\bitirmeprojesi\bin\roslyn\System.Collections.Immutable.dll
+E:\proje asp\bitirmeprojesi\bin\roslyn\System.Console.dll
+E:\proje asp\bitirmeprojesi\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+E:\proje asp\bitirmeprojesi\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\proje asp\bitirmeprojesi\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\proje asp\bitirmeprojesi\bin\roslyn\System.Globalization.Calendars.dll
+E:\proje asp\bitirmeprojesi\bin\roslyn\System.IO.Compression.dll
+E:\proje asp\bitirmeprojesi\bin\roslyn\System.IO.Compression.ZipFile.dll
+E:\proje asp\bitirmeprojesi\bin\roslyn\System.IO.FileSystem.dll
+E:\proje asp\bitirmeprojesi\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\proje asp\bitirmeprojesi\bin\roslyn\System.Net.Http.dll
+E:\proje asp\bitirmeprojesi\bin\roslyn\System.Net.Sockets.dll
+E:\proje asp\bitirmeprojesi\bin\roslyn\System.Reflection.Metadata.dll
+E:\proje asp\bitirmeprojesi\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\proje asp\bitirmeprojesi\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\proje asp\bitirmeprojesi\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\proje asp\bitirmeprojesi\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\proje asp\bitirmeprojesi\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\proje asp\bitirmeprojesi\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\proje asp\bitirmeprojesi\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\proje asp\bitirmeprojesi\bin\roslyn\System.ValueTuple.dll
+E:\proje asp\bitirmeprojesi\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\proje asp\bitirmeprojesi\bin\roslyn\System.Xml.XmlDocument.dll
+E:\proje asp\bitirmeprojesi\bin\roslyn\System.Xml.XPath.dll
+E:\proje asp\bitirmeprojesi\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\proje asp\bitirmeprojesi\bin\roslyn\vbc.exe
+E:\proje asp\bitirmeprojesi\bin\roslyn\vbc.exe.config
+E:\proje asp\bitirmeprojesi\bin\roslyn\vbc.rsp
+E:\proje asp\bitirmeprojesi\bin\roslyn\VBCSCompiler.exe
+E:\proje asp\bitirmeprojesi\bin\roslyn\VBCSCompiler.exe.config
+E:\proje asp\bitirmeprojesi\bin\Antlr3.Runtime.dll
+E:\proje asp\bitirmeprojesi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\proje asp\bitirmeprojesi\bin\Microsoft.Web.Infrastructure.dll
+E:\proje asp\bitirmeprojesi\bin\Newtonsoft.Json.dll
+E:\proje asp\bitirmeprojesi\bin\System.Web.Helpers.dll
+E:\proje asp\bitirmeprojesi\bin\System.Web.Mvc.dll
+E:\proje asp\bitirmeprojesi\bin\System.Web.Optimization.dll
+E:\proje asp\bitirmeprojesi\bin\System.Web.Razor.dll
+E:\proje asp\bitirmeprojesi\bin\System.Web.WebPages.Deployment.dll
+E:\proje asp\bitirmeprojesi\bin\System.Web.WebPages.dll
+E:\proje asp\bitirmeprojesi\bin\System.Web.WebPages.Razor.dll
+E:\proje asp\bitirmeprojesi\bin\WebGrease.dll
+E:\proje asp\bitirmeprojesi\bin\System.Web.Helpers.xml
+E:\proje asp\bitirmeprojesi\bin\System.Web.Mvc.xml
+E:\proje asp\bitirmeprojesi\bin\System.Web.Optimization.xml
+E:\proje asp\bitirmeprojesi\bin\System.Web.Razor.xml
+E:\proje asp\bitirmeprojesi\bin\System.Web.WebPages.xml
+E:\proje asp\bitirmeprojesi\bin\System.Web.WebPages.Deployment.xml
+E:\proje asp\bitirmeprojesi\bin\System.Web.WebPages.Razor.xml
+E:\proje asp\bitirmeprojesi\bin\Newtonsoft.Json.xml
+E:\proje asp\bitirmeprojesi\bin\Antlr3.Runtime.pdb
+E:\proje asp\bitirmeprojesi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\proje asp\bitirmeprojesi\bin\tr\System.Web.Helpers.resources.dll
+E:\proje asp\bitirmeprojesi\bin\tr\System.Web.Mvc.resources.dll
+E:\proje asp\bitirmeprojesi\bin\tr\System.Web.Optimization.resources.dll
+E:\proje asp\bitirmeprojesi\bin\tr\System.Web.Razor.resources.dll
+E:\proje asp\bitirmeprojesi\bin\tr\System.Web.WebPages.resources.dll
+E:\proje asp\bitirmeprojesi\bin\tr\System.Web.WebPages.Deployment.resources.dll
+E:\proje asp\bitirmeprojesi\bin\tr\System.Web.WebPages.Razor.resources.dll
+E:\proje asp\bitirmeprojesi\obj\Debug\bitirmeprojesi.csproj.AssemblyReference.cache
+E:\proje asp\bitirmeprojesi\obj\Debug\bitirmeprojesi.csproj.CoreCompileInputs.cache
+E:\proje asp\bitirmeprojesi\obj\Debug\bitirmeprojesi.csproj.CopyComplete
+E:\proje asp\bitirmeprojesi\obj\Debug\bitirmeprojesi.dll
+E:\proje asp\bitirmeprojesi\obj\Debug\bitirmeprojesi.pdb
+E:\proje asp\bitirmeprojesi\bin\Microsoft.AspNet.SignalR.Core.dll
+E:\proje asp\bitirmeprojesi\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+E:\proje asp\bitirmeprojesi\bin\Microsoft.Owin.dll
+E:\proje asp\bitirmeprojesi\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\proje asp\bitirmeprojesi\bin\Microsoft.Owin.Security.dll
+E:\proje asp\bitirmeprojesi\bin\Owin.dll
+E:\proje asp\bitirmeprojesi\bin\Microsoft.AspNet.SignalR.Core.xml
+E:\proje asp\bitirmeprojesi\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+E:\proje asp\bitirmeprojesi\bin\Microsoft.Owin.xml
+E:\proje asp\bitirmeprojesi\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\proje asp\bitirmeprojesi\bin\Microsoft.Owin.Security.xml
+E:\proje asp\bitirmeprojesi\bin\tr\Microsoft.AspNet.SignalR.Core.resources.dll
+E:\proje asp\bitirmeprojesi\bin\tr\Microsoft.AspNet.SignalR.SystemWeb.resources.dll
+E:\proje asp\bitirmeprojesi\bin\tr\Microsoft.Owin.resources.dll
+E:\proje asp\bitirmeprojesi\bin\tr\Microsoft.Owin.Host.SystemWeb.resources.dll
+E:\proje asp\bitirmeprojesi\bin\tr\Microsoft.Owin.Security.resources.dll
+D:\bitirmeprojesi\bin\bitirmeprojesi.dll.config
+D:\bitirmeprojesi\bin\bitirmeprojesi.dll
+D:\bitirmeprojesi\bin\bitirmeprojesi.pdb
+D:\bitirmeprojesi\bin\roslyn\csc.exe
+D:\bitirmeprojesi\bin\roslyn\csc.exe.config
+D:\bitirmeprojesi\bin\roslyn\csc.rsp
+D:\bitirmeprojesi\bin\roslyn\csi.exe
+D:\bitirmeprojesi\bin\roslyn\csi.exe.config
+D:\bitirmeprojesi\bin\roslyn\csi.rsp
+D:\bitirmeprojesi\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\bitirmeprojesi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\bitirmeprojesi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\bitirmeprojesi\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\bitirmeprojesi\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\bitirmeprojesi\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\bitirmeprojesi\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\bitirmeprojesi\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\bitirmeprojesi\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\bitirmeprojesi\bin\roslyn\Microsoft.Managed.Core.targets
+D:\bitirmeprojesi\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\bitirmeprojesi\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\bitirmeprojesi\bin\roslyn\System.AppContext.dll
+D:\bitirmeprojesi\bin\roslyn\System.Collections.Immutable.dll
+D:\bitirmeprojesi\bin\roslyn\System.Console.dll
+D:\bitirmeprojesi\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\bitirmeprojesi\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\bitirmeprojesi\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\bitirmeprojesi\bin\roslyn\System.Globalization.Calendars.dll
+D:\bitirmeprojesi\bin\roslyn\System.IO.Compression.dll
+D:\bitirmeprojesi\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\bitirmeprojesi\bin\roslyn\System.IO.FileSystem.dll
+D:\bitirmeprojesi\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\bitirmeprojesi\bin\roslyn\System.Net.Http.dll
+D:\bitirmeprojesi\bin\roslyn\System.Net.Sockets.dll
+D:\bitirmeprojesi\bin\roslyn\System.Reflection.Metadata.dll
+D:\bitirmeprojesi\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\bitirmeprojesi\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\bitirmeprojesi\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\bitirmeprojesi\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\bitirmeprojesi\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\bitirmeprojesi\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\bitirmeprojesi\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\bitirmeprojesi\bin\roslyn\System.ValueTuple.dll
+D:\bitirmeprojesi\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\bitirmeprojesi\bin\roslyn\System.Xml.XmlDocument.dll
+D:\bitirmeprojesi\bin\roslyn\System.Xml.XPath.dll
+D:\bitirmeprojesi\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\bitirmeprojesi\bin\roslyn\vbc.exe
+D:\bitirmeprojesi\bin\roslyn\vbc.exe.config
+D:\bitirmeprojesi\bin\roslyn\vbc.rsp
+D:\bitirmeprojesi\bin\roslyn\VBCSCompiler.exe
+D:\bitirmeprojesi\bin\roslyn\VBCSCompiler.exe.config
+D:\bitirmeprojesi\bin\Antlr3.Runtime.dll
+D:\bitirmeprojesi\bin\Microsoft.AspNet.SignalR.Core.dll
+D:\bitirmeprojesi\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+D:\bitirmeprojesi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\bitirmeprojesi\bin\Microsoft.Owin.dll
+D:\bitirmeprojesi\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\bitirmeprojesi\bin\Microsoft.Owin.Security.dll
+D:\bitirmeprojesi\bin\Microsoft.Web.Infrastructure.dll
+D:\bitirmeprojesi\bin\Newtonsoft.Json.dll
+D:\bitirmeprojesi\bin\Owin.dll
+D:\bitirmeprojesi\bin\System.Web.Helpers.dll
+D:\bitirmeprojesi\bin\System.Web.Mvc.dll
+D:\bitirmeprojesi\bin\System.Web.Optimization.dll
+D:\bitirmeprojesi\bin\System.Web.Razor.dll
+D:\bitirmeprojesi\bin\System.Web.WebPages.Deployment.dll
+D:\bitirmeprojesi\bin\System.Web.WebPages.dll
+D:\bitirmeprojesi\bin\System.Web.WebPages.Razor.dll
+D:\bitirmeprojesi\bin\WebGrease.dll
+D:\bitirmeprojesi\bin\Microsoft.AspNet.SignalR.Core.xml
+D:\bitirmeprojesi\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+D:\bitirmeprojesi\bin\Microsoft.Owin.xml
+D:\bitirmeprojesi\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\bitirmeprojesi\bin\Microsoft.Owin.Security.xml
+D:\bitirmeprojesi\bin\System.Web.Helpers.xml
+D:\bitirmeprojesi\bin\System.Web.Mvc.xml
+D:\bitirmeprojesi\bin\System.Web.Optimization.xml
+D:\bitirmeprojesi\bin\System.Web.Razor.xml
+D:\bitirmeprojesi\bin\System.Web.WebPages.xml
+D:\bitirmeprojesi\bin\System.Web.WebPages.Deployment.xml
+D:\bitirmeprojesi\bin\System.Web.WebPages.Razor.xml
+D:\bitirmeprojesi\bin\Newtonsoft.Json.xml
+D:\bitirmeprojesi\bin\Antlr3.Runtime.pdb
+D:\bitirmeprojesi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\bitirmeprojesi\bin\tr\Microsoft.AspNet.SignalR.Core.resources.dll
+D:\bitirmeprojesi\bin\tr\Microsoft.AspNet.SignalR.SystemWeb.resources.dll
+D:\bitirmeprojesi\bin\tr\Microsoft.Owin.resources.dll
+D:\bitirmeprojesi\bin\tr\Microsoft.Owin.Host.SystemWeb.resources.dll
+D:\bitirmeprojesi\bin\tr\Microsoft.Owin.Security.resources.dll
+D:\bitirmeprojesi\bin\tr\System.Web.Helpers.resources.dll
+D:\bitirmeprojesi\bin\tr\System.Web.Mvc.resources.dll
+D:\bitirmeprojesi\bin\tr\System.Web.Optimization.resources.dll
+D:\bitirmeprojesi\bin\tr\System.Web.Razor.resources.dll
+D:\bitirmeprojesi\bin\tr\System.Web.WebPages.resources.dll
+D:\bitirmeprojesi\bin\tr\System.Web.WebPages.Deployment.resources.dll
+D:\bitirmeprojesi\bin\tr\System.Web.WebPages.Razor.resources.dll
+D:\bitirmeprojesi\obj\Debug\bitirmeprojesi.csproj.AssemblyReference.cache
+D:\bitirmeprojesi\obj\Debug\bitirmeprojesi.csproj.CoreCompileInputs.cache
+D:\bitirmeprojesi\obj\Debug\bitirmeprojesi.csproj.CopyComplete
+D:\bitirmeprojesi\obj\Debug\bitirmeprojesi.dll
+D:\bitirmeprojesi\obj\Debug\bitirmeprojesi.pdb
+D:\bitirmeprojesi\bin\EntityFramework.dll
+D:\bitirmeprojesi\bin\EntityFramework.SqlServer.dll
+D:\bitirmeprojesi\bin\EntityFramework.xml
+D:\bitirmeprojesi\bin\EntityFramework.SqlServer.xml

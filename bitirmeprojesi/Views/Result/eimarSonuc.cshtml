@@ -1,0 +1,183 @@
+﻿@using bitirmeprojesi.Models
+@model ozgurluk
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title> e-imar sonuç </title>
+    <link rel="stylesheet" href="~/Content/eimarSonuc.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="container-wrapper">
+
+        <h1 class="baslik">PARSEL BİLGİSİ</h1>
+        <table class="table">
+
+            <thead>
+                <tr>
+                    <th>İL</th>
+                    <th>İLÇE</th>
+                    <th>MAHALLE ADI</th>
+                    <th>PAFTA NO</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="İl">Antalya</td>
+                    <td data-label="İlçe">@Model.mahalleler.tapu_mahalle_adi</td>
+                    <td data-label="Mahalle Adı">@Model.mahalleler.mahalle_adi </td>
+                    <td data-label="Pafta No">@Model.pafta_no</td>
+
+                </tr>
+            </tbody>
+            <thead>
+                <tr>
+                    <th>ADA NO</th>
+                    <th>PARSEL NO</th>
+                    <th>ALAN (M²)</th>
+                    <th>ALAN</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Ada No">@Model.ada_no</td>
+                    <td data-label="Parsel No">@Model.parsel_no</td>
+                    <td data-label="Alan(m2)">@Model.alan_m2</td>
+                    <td data-label="Alan">@Model.alan</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <h1 class="baslik">İNŞAAT DURUMU</h1>
+        <table class="table">
+
+            <thead>
+                <tr>
+                    <th>ÖN BAHÇE</th>
+                    <th>YAN BAHÇE 1</th>
+                    <th>YAN BAHÇE 2</th>
+                    <th>ARKA BAHÇE</th>
+                    <th>İNŞAAT CEPHESİ</th>
+                    <th>İNŞAAT DERİNLİĞİ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Ön Bahçe">@Model.on_bahce</td>
+                    <td data-label="Yan Bahçe1">@Model.yan_bahce1</td>
+                    <td data-label="Yan Bahçe2">@Model.yan_bahce2</td>
+                    <td data-label="Arka Bahçe">@Model.arka_bahce</td>
+                    <td data-label="İnşaat Cephesi">@Model.insaat_cephesi</td>
+                    <td data-label="İnşaat Derinliği">@Model.insaat_derinligi</td>
+                </tr>
+            </tbody>
+            <thead>
+                <tr>
+                    <th>SUBASMAN KOTU</th>
+                    <th>KAT ADEDI</th>
+                    <th>SAÇAK SEVİYESİ</th>
+                    <th>TAKS</th>
+                    <th>KAKS</th>
+                    <th>EMSAL</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Subasman Kotu">@Model.subasman_kotu</td>
+                    <td data-label="Kat Adedi">@Model.ozgurluk_katlar.kat_adedi</td>
+                    <td data-label="Saçak Seviyesi">@Model.sacak_seviyesi</td>
+                    <td data-label="Taks">@Model.taks</td>
+                    <td data-label="Kaks"@Model.kaks></td>
+                    <td data-label="Emsal">@Model.emsal</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <br />
+        <br />
+
+        <table class="table">
+
+            <thead>
+                <tr>
+                    <th>İNŞAAT NİZAMI</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="İnşaat Nizamı">@Model.insaat_nizami</td>
+                </tr>
+            </tbody>
+            <thead>
+                <tr>
+                    <th>PLAN FONKSİYON ADI</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Plan Fonskiyon Adı">@Model.plan_fonksiyon_adi</td>
+                </tr>
+            </tbody>
+            <thead>
+                <tr>
+                    <th>İFRAZ ŞARTI</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="İfraz Şartı">@Model.ifraz_sarti</td>
+                </tr>
+            </tbody>
+            <thead>
+                <tr>
+                    <th>AÇIKLAMA 1</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Açıklama1">@Model.aciklama1</td>
+                </tr>
+            </tbody>
+            <thead>
+                <tr>
+                    <th>AÇIKLAMA 2</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Açıklama2">@Model.aciklama2</td>
+                </tr>
+            </tbody>
+            <thead>
+                <tr>
+                    <th>AÇIKLAMA 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Açıklama3">@Model.aciklama3</td>
+                </tr>
+            </tbody>
+            <thead>
+                <tr>
+                    <th>PARSEL DURUMU</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Parse Durumu">@Model.parsel_durumu</td>
+                </tr>
+            </tbody>
+
+        </table>
+        <a href="@Url.Action("eimar", "Home")" class="bn5">E-İmar</a>
+    </div>
+
+
+
+</body>
+</html>

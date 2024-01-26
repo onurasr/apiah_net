@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="bitirme_projesiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="contact">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="subject" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="message" Type="text" Nullable="false" />
+          <Property Name="created_at" Type="datetime" />
+        </EntityType>
+        <EntityType Name="mahalleler">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="mahalle_adi" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="tapu_mahalle_adi" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ozgurluk">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="mahalle_id" Type="int" Nullable="false" />
+          <Property Name="pafta_no" Type="nvarchar" MaxLength="255" />
+          <Property Name="ada_no" Type="float" />
+          <Property Name="parsel_no" Type="float" />
+          <Property Name="ada_parsel" Type="nvarchar" MaxLength="255" />
+          <Property Name="alan_m2" Type="nvarchar" MaxLength="255" />
+          <Property Name="alan" Type="nvarchar" MaxLength="255" />
+          <Property Name="plan_fonksiyon_adi" Type="nvarchar" MaxLength="255" />
+          <Property Name="insaat_nizami" Type="nvarchar" MaxLength="255" />
+          <Property Name="subasman_kotu" Type="nvarchar" MaxLength="255" />
+          <Property Name="kat_adedi_id" Type="int" />
+          <Property Name="sacak_seviyesi" Type="nvarchar" MaxLength="255" />
+          <Property Name="taks" Type="nvarchar" MaxLength="255" />
+          <Property Name="kaks" Type="nvarchar" MaxLength="255" />
+          <Property Name="emsal" Type="nvarchar" MaxLength="255" />
+          <Property Name="on_bahce" Type="nvarchar" MaxLength="255" />
+          <Property Name="yan_bahce1" Type="nvarchar" MaxLength="255" />
+          <Property Name="yan_bahce2" Type="nvarchar" MaxLength="255" />
+          <Property Name="arka_bahce" Type="nvarchar" MaxLength="255" />
+          <Property Name="insaat_cephesi" Type="float" />
+          <Property Name="insaat_derinligi" Type="nvarchar" MaxLength="255" />
+          <Property Name="ifraz_sarti" Type="nvarchar" MaxLength="255" />
+          <Property Name="aciklama1" Type="nvarchar" MaxLength="255" />
+          <Property Name="aciklama2" Type="nvarchar" MaxLength="255" />
+          <Property Name="aciklama3" Type="nvarchar" MaxLength="255" />
+          <Property Name="parsel_durumu" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="ozgurluk_katlar">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="kat_adedi" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__ozgurluk__kat_ad__5224328E">
+          <End Role="ozgurluk_katlar" Type="Self.ozgurluk_katlar" Multiplicity="0..1" />
+          <End Role="ozgurluk" Type="Self.ozgurluk" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ozgurluk_katlar">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ozgurluk">
+              <PropertyRef Name="kat_adedi_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ozgurluk__mahall__51300E55">
+          <End Role="mahalleler" Type="Self.mahalleler" Multiplicity="1" />
+          <End Role="ozgurluk" Type="Self.ozgurluk" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mahalleler">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ozgurluk">
+              <PropertyRef Name="mahalle_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="bitirme_projesiModelStoreContainer">
+          <EntitySet Name="contact" EntityType="Self.contact" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="mahalleler" EntityType="Self.mahalleler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ozgurluk" EntityType="Self.ozgurluk" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ozgurluk_katlar" EntityType="Self.ozgurluk_katlar" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__ozgurluk__kat_ad__5224328E" Association="Self.FK__ozgurluk__kat_ad__5224328E">
+            <End Role="ozgurluk_katlar" EntitySet="ozgurluk_katlar" />
+            <End Role="ozgurluk" EntitySet="ozgurluk" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ozgurluk__mahall__51300E55" Association="Self.FK__ozgurluk__mahall__51300E55">
+            <End Role="mahalleler" EntitySet="mahalleler" />
+            <End Role="ozgurluk" EntitySet="ozgurluk" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="bitirme_projesiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="contact">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="subject" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="message" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="created_at" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="mahalleler">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="mahalle_adi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tapu_mahalle_adi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="ozgurluk" Relationship="Self.FK__ozgurluk__mahall__51300E55" FromRole="mahalleler" ToRole="ozgurluk" />
+        </EntityType>
+        <EntityType Name="ozgurluk">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="mahalle_id" Type="Int32" Nullable="false" />
+          <Property Name="pafta_no" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ada_no" Type="Double" />
+          <Property Name="parsel_no" Type="Double" />
+          <Property Name="ada_parsel" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="alan_m2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="alan" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="plan_fonksiyon_adi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="insaat_nizami" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="subasman_kotu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="kat_adedi_id" Type="Int32" />
+          <Property Name="sacak_seviyesi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="taks" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="kaks" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="emsal" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="on_bahce" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="yan_bahce1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="yan_bahce2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="arka_bahce" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="insaat_cephesi" Type="Double" />
+          <Property Name="insaat_derinligi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ifraz_sarti" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="aciklama1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="aciklama2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="aciklama3" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="parsel_durumu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="mahalleler" Relationship="Self.FK__ozgurluk__mahall__51300E55" FromRole="ozgurluk" ToRole="mahalleler" />
+          <NavigationProperty Name="ozgurluk_katlar" Relationship="Self.FK__ozgurluk__kat_ad__5224328E" FromRole="ozgurluk" ToRole="ozgurluk_katlar" />
+        </EntityType>
+        <EntityType Name="ozgurluk_katlar">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="kat_adedi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="ozgurluk" Relationship="Self.FK__ozgurluk__kat_ad__5224328E" FromRole="ozgurluk_katlar" ToRole="ozgurluk" />
+        </EntityType>
+        <Association Name="FK__ozgurluk__mahall__51300E55">
+          <End Role="mahalleler" Type="Self.mahalleler" Multiplicity="1" />
+          <End Role="ozgurluk" Type="Self.ozgurluk" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mahalleler">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ozgurluk">
+              <PropertyRef Name="mahalle_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ozgurluk__kat_ad__5224328E">
+          <End Role="ozgurluk_katlar" Type="Self.ozgurluk_katlar" Multiplicity="0..1" />
+          <End Role="ozgurluk" Type="Self.ozgurluk" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ozgurluk_katlar">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ozgurluk">
+              <PropertyRef Name="kat_adedi_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="bitirme_projesiEntities0" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="contact" EntityType="Self.contact" />
+          <EntitySet Name="mahalleler" EntityType="Self.mahalleler" />
+          <EntitySet Name="ozgurluk" EntityType="Self.ozgurluk" />
+          <EntitySet Name="ozgurluk_katlar" EntityType="Self.ozgurluk_katlar" />
+          <AssociationSet Name="FK__ozgurluk__mahall__51300E55" Association="Self.FK__ozgurluk__mahall__51300E55">
+            <End Role="mahalleler" EntitySet="mahalleler" />
+            <End Role="ozgurluk" EntitySet="ozgurluk" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ozgurluk__kat_ad__5224328E" Association="Self.FK__ozgurluk__kat_ad__5224328E">
+            <End Role="ozgurluk_katlar" EntitySet="ozgurluk_katlar" />
+            <End Role="ozgurluk" EntitySet="ozgurluk" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="bitirme_projesiModelStoreContainer" CdmEntityContainer="bitirme_projesiEntities0">
+          <EntitySetMapping Name="contact">
+            <EntityTypeMapping TypeName="bitirme_projesiModel.contact">
+              <MappingFragment StoreEntitySet="contact">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="subject" ColumnName="subject" />
+                <ScalarProperty Name="message" ColumnName="message" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mahalleler">
+            <EntityTypeMapping TypeName="bitirme_projesiModel.mahalleler">
+              <MappingFragment StoreEntitySet="mahalleler">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="mahalle_adi" ColumnName="mahalle_adi" />
+                <ScalarProperty Name="tapu_mahalle_adi" ColumnName="tapu_mahalle_adi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ozgurluk">
+            <EntityTypeMapping TypeName="bitirme_projesiModel.ozgurluk">
+              <MappingFragment StoreEntitySet="ozgurluk">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="mahalle_id" ColumnName="mahalle_id" />
+                <ScalarProperty Name="pafta_no" ColumnName="pafta_no" />
+                <ScalarProperty Name="ada_no" ColumnName="ada_no" />
+                <ScalarProperty Name="parsel_no" ColumnName="parsel_no" />
+                <ScalarProperty Name="ada_parsel" ColumnName="ada_parsel" />
+                <ScalarProperty Name="alan_m2" ColumnName="alan_m2" />
+                <ScalarProperty Name="alan" ColumnName="alan" />
+                <ScalarProperty Name="plan_fonksiyon_adi" ColumnName="plan_fonksiyon_adi" />
+                <ScalarProperty Name="insaat_nizami" ColumnName="insaat_nizami" />
+                <ScalarProperty Name="subasman_kotu" ColumnName="subasman_kotu" />
+                <ScalarProperty Name="kat_adedi_id" ColumnName="kat_adedi_id" />
+                <ScalarProperty Name="sacak_seviyesi" ColumnName="sacak_seviyesi" />
+                <ScalarProperty Name="taks" ColumnName="taks" />
+                <ScalarProperty Name="kaks" ColumnName="kaks" />
+                <ScalarProperty Name="emsal" ColumnName="emsal" />
+                <ScalarProperty Name="on_bahce" ColumnName="on_bahce" />
+                <ScalarProperty Name="yan_bahce1" ColumnName="yan_bahce1" />
+                <ScalarProperty Name="yan_bahce2" ColumnName="yan_bahce2" />
+                <ScalarProperty Name="arka_bahce" ColumnName="arka_bahce" />
+                <ScalarProperty Name="insaat_cephesi" ColumnName="insaat_cephesi" />
+                <ScalarProperty Name="insaat_derinligi" ColumnName="insaat_derinligi" />
+                <ScalarProperty Name="ifraz_sarti" ColumnName="ifraz_sarti" />
+                <ScalarProperty Name="aciklama1" ColumnName="aciklama1" />
+                <ScalarProperty Name="aciklama2" ColumnName="aciklama2" />
+                <ScalarProperty Name="aciklama3" ColumnName="aciklama3" />
+                <ScalarProperty Name="parsel_durumu" ColumnName="parsel_durumu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ozgurluk_katlar">
+            <EntityTypeMapping TypeName="bitirme_projesiModel.ozgurluk_katlar">
+              <MappingFragment StoreEntitySet="ozgurluk_katlar">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="kat_adedi" ColumnName="kat_adedi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,138 @@
+﻿@using bitirmeprojesi.Models
+@model ozgurluk
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/insaatHesaplamaSonuc.css" rel="stylesheet">
+
+
+
+    <title>Building Design</title>
+</head>
+<body>
+    <section>
+        <div class="container-wrapper">
+
+            <h3 style="text-align:center">
+                ADA/PARSEL : @Model.ada_parsel
+            </h3>
+            <table>
+                <tr>
+                    <td>
+                        <h5 class="tia">TOPLAM İNŞAAT ALANI: @Model.hesaplananAlan m2</h5>
+                    </td>
+                    <td>
+                        <h5 class="ks">
+                            KAT SAYISI: @Model.ozgurluk_katlar.kat_adedi
+                        </h5>
+                    </td>
+                </tr>
+
+            </table>
+
+            <div class="building">
+
+                <div class="triangle"></div>
+                <div class="tablolar-container">
+                    @if (@Model.kat_adedi_id == 1)
+                    {
+                        for (int i = 7; i >= 1; i--)
+                        {<table class="tablo">
+                                <tr>
+                                    <td class="tableler">@i . table </td>
+                                    <td class="tablemetre">@(Model.hesaplananAlan / 7) m2</td>
+                                </tr>
+                            </table>}
+                    }
+                    @if (@Model.kat_adedi_id == 2)
+                    {
+                        for (int i = 4; i >= 1; i--)
+                        {<table class="tablo">
+                                <tr>
+                                    <td class="tableler">@i . table </td>
+                                    <td class="tablemetre">@(Model.hesaplananAlan / 4) m2</td>
+                                </tr>
+                            </table>}
+                    }
+                    @if (@Model.kat_adedi_id == 3)
+                    {
+                        for (int i = 3; i >= 1; i--)
+                        {<table class="tablo">
+                                <tr>
+                                    <td class="tableler">@i . table </td>
+                                    <td class="tablemetre">@(Model.hesaplananAlan / 3) m2</td>
+                                </tr>
+                            </table>}
+                    }
+                    @if (@Model.kat_adedi_id == 4)
+                    {
+                        for (int i = 1; i >= 1; i--)
+                        {<table class="tablo">
+                                <tr>
+                                    <td class="tableler">@i . table </td>
+                                    <td class="tablemetre">@(Model.hesaplananAlan / 1) m2</td>
+                                </tr>
+                            </table>}
+                    }
+                    @if (@Model.kat_adedi_id == 5)
+                    {
+                        for (int i = 7; i >= 1; i--)
+                        {<table class="tablo">
+                                <tr>
+                                    <td class="tableler">@i . table </td>
+                                    <td class="tablemetre">@(Model.hesaplananAlan / 7) m2</td>
+                                </tr>
+                            </table>}
+                    }
+                    @if (@Model.kat_adedi_id == 6)
+                    {
+                        for (int i = 5; i >= 1; i--)
+                        {<table class="tablo">
+                                <tr>
+                                    <td class="tableler">@i . table </td>
+                                    <td class="tablemetre">@(Model.hesaplananAlan / 5) m2</td>
+                                </tr>
+                            </table>}
+                    }
+                    @if (@Model.kat_adedi_id == 7)
+                    {
+                        for (int i = 4; i >= 1; i--)
+                        {<table class="tablo">
+                                <tr>
+                                    <td class="tableler">@i . table </td>
+                                    <td class="tablemetre">@(Model.hesaplananAlan / 4) m2</td>
+                                </tr>
+                            </table>}
+                    }
+                    @if (@Model.kat_adedi_id == 8)
+                    {
+                        for (int i = 3; i >= 1; i--)
+                        {<table class="tablo">
+                                <tr>
+                                    <td class="tableler">@i . table </td>
+                                    <td class="tablemetre">@(Model.hesaplananAlan / 3) m2</td>
+                                </tr>
+                            </table>}
+                    }
+                    @if (@Model.kat_adedi_id == 9)
+                    {
+                        for (int i = 1; i >= 1; i--)
+                        {<table class="tablo">
+                                <tr>
+                                    <td class="sematik">@Model.plan_fonksiyon_adi --> GİRİLEN ADA/PARSELİN İNŞAAT ALANI HESAPLANAMAZ!!</td>
+                                </tr>
+                            </table>}
+                    }
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>

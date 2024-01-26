@@ -1,0 +1,93 @@
+﻿@using bitirmeprojesi.Models
+@model List<mahalleler>
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>E-İmar Bilgi Girişi</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="~/Content/eimar.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<body>
+
+    <div id="eimar" class="section">
+        <div class="section-center">
+            <div class="container">
+                <div class="row">
+                    <div class="eimar-form">
+
+                        <form action="https://localhost:44384/Result/eimarSonuc" method="get">
+                            <div class="form-header">
+
+
+                                <h1>E-İMAR BİLGİ GİRİŞİ</h1>
+                            </div>
+                            <div class="form-group">
+                                <span class="form-label">İl</span>
+                                <select class="form-control" name="il" required>
+                                    <option></option>
+                                    <option >Antalya</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <span class="form-label">İlçe</span>
+                                <select class="form-control" name="ilce" required> 
+                                    <option></option>
+                                    @foreach (var item in Model)
+                                    {
+                        <option value="@item.tapu_mahalle_adi">@item.tapu_mahalle_adi</option>}
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <span class="form-label">Mahalle</span>
+                                <select class="form-control" name="mahalle" required>
+                                    <option></option>
+                                    @foreach (var item in Model)
+                                    {
+                                <option value="@item.mahalle_adi">@item.mahalle_adi</option>
+}
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <span class="form-label">Ada</span>
+                                <input name="ada_no" class="form-control" type="text" placeholder="Ada No" required>
+                            </div>
+
+                            <div class="form-group">
+                                <span class="form-label">Parsel</span>
+                                <input name="parsel_no" class="form-control" type="text" placeholder="Parsel No" required>
+                            </div>
+                            <div class="form-btn">
+                                <button type="submit" class="submit-btn">Gönder</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="~/Scripts/eimar.js"></script>
+
+</body>
+
+</html>

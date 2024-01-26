@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bitirme_projesiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="contact">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="message" Type="text" Nullable="false" />
+    <Property Name="created_at" Type="datetime" />
+  </EntityType>
+  <EntityType Name="mahalleler">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="mahalle_adi" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="tapu_mahalle_adi" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ozgurluk">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="mahalle_id" Type="int" Nullable="false" />
+    <Property Name="pafta_no" Type="nvarchar" MaxLength="255" />
+    <Property Name="ada_no" Type="float" />
+    <Property Name="parsel_no" Type="float" />
+    <Property Name="ada_parsel" Type="nvarchar" MaxLength="255" />
+    <Property Name="alan_m2" Type="float" />
+    <Property Name="alan" Type="nvarchar" MaxLength="255" />
+    <Property Name="plan_fonksiyon_adi" Type="nvarchar" MaxLength="255" />
+    <Property Name="insaat_nizami" Type="nvarchar" MaxLength="255" />
+    <Property Name="subasman_kotu" Type="nvarchar" MaxLength="255" />
+    <Property Name="kat_adedi_id" Type="int" />
+    <Property Name="sacak_seviyesi" Type="nvarchar" MaxLength="255" />
+    <Property Name="taks" Type="nvarchar" MaxLength="255" />
+    <Property Name="kaks" Type="nvarchar" MaxLength="255" />
+    <Property Name="emsal" Type="nvarchar" MaxLength="255" />
+    <Property Name="on_bahce" Type="nvarchar" MaxLength="255" />
+    <Property Name="yan_bahce1" Type="nvarchar" MaxLength="255" />
+    <Property Name="yan_bahce2" Type="nvarchar" MaxLength="255" />
+    <Property Name="arka_bahce" Type="nvarchar" MaxLength="255" />
+    <Property Name="insaat_cephesi" Type="nvarchar" MaxLength="255" />
+    <Property Name="insaat_derinligi" Type="nvarchar" MaxLength="255" />
+    <Property Name="ifraz_sarti" Type="nvarchar" MaxLength="255" />
+    <Property Name="aciklama1" Type="nvarchar" MaxLength="255" />
+    <Property Name="aciklama2" Type="nvarchar" MaxLength="255" />
+    <Property Name="aciklama3" Type="nvarchar" MaxLength="255" />
+    <Property Name="parsel_durumu" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ozgurluk_katlar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="kat_adedi" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__ozgurluk__kat_ad__5EBF139D">
+    <End Role="ozgurluk_katlar" Type="Self.ozgurluk_katlar" Multiplicity="0..1" />
+    <End Role="ozgurluk" Type="Self.ozgurluk" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ozgurluk_katlar">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ozgurluk">
+        <PropertyRef Name="kat_adedi_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ozgurluk__mahall__5DCAEF64">
+    <End Role="mahalleler" Type="Self.mahalleler" Multiplicity="1" />
+    <End Role="ozgurluk" Type="Self.ozgurluk" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="mahalleler">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ozgurluk">
+        <PropertyRef Name="mahalle_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="bitirme_projesiModelStoreContainer">
+    <EntitySet Name="contact" EntityType="Self.contact" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="mahalleler" EntityType="Self.mahalleler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ozgurluk" EntityType="Self.ozgurluk" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ozgurluk_katlar" EntityType="Self.ozgurluk_katlar" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__ozgurluk__kat_ad__5EBF139D" Association="Self.FK__ozgurluk__kat_ad__5EBF139D">
+      <End Role="ozgurluk_katlar" EntitySet="ozgurluk_katlar" />
+      <End Role="ozgurluk" EntitySet="ozgurluk" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ozgurluk__mahall__5DCAEF64" Association="Self.FK__ozgurluk__mahall__5DCAEF64">
+      <End Role="mahalleler" EntitySet="mahalleler" />
+      <End Role="ozgurluk" EntitySet="ozgurluk" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

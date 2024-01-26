@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="bitirme_projesiModelStoreContainer" CdmEntityContainer="apiahEntities">
+    <EntitySetMapping Name="contact">
+      <EntityTypeMapping TypeName="bitirme_projesiModel.contact">
+        <MappingFragment StoreEntitySet="contact">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="message" ColumnName="message" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mahalleler">
+      <EntityTypeMapping TypeName="bitirme_projesiModel.mahalleler">
+        <MappingFragment StoreEntitySet="mahalleler">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="mahalle_adi" ColumnName="mahalle_adi" />
+          <ScalarProperty Name="tapu_mahalle_adi" ColumnName="tapu_mahalle_adi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ozgurluk">
+      <EntityTypeMapping TypeName="bitirme_projesiModel.ozgurluk">
+        <MappingFragment StoreEntitySet="ozgurluk">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="mahalle_id" ColumnName="mahalle_id" />
+          <ScalarProperty Name="pafta_no" ColumnName="pafta_no" />
+          <ScalarProperty Name="ada_no" ColumnName="ada_no" />
+          <ScalarProperty Name="parsel_no" ColumnName="parsel_no" />
+          <ScalarProperty Name="ada_parsel" ColumnName="ada_parsel" />
+          <ScalarProperty Name="alan_m2" ColumnName="alan_m2" />
+          <ScalarProperty Name="alan" ColumnName="alan" />
+          <ScalarProperty Name="plan_fonksiyon_adi" ColumnName="plan_fonksiyon_adi" />
+          <ScalarProperty Name="insaat_nizami" ColumnName="insaat_nizami" />
+          <ScalarProperty Name="subasman_kotu" ColumnName="subasman_kotu" />
+          <ScalarProperty Name="kat_adedi_id" ColumnName="kat_adedi_id" />
+          <ScalarProperty Name="sacak_seviyesi" ColumnName="sacak_seviyesi" />
+          <ScalarProperty Name="taks" ColumnName="taks" />
+          <ScalarProperty Name="kaks" ColumnName="kaks" />
+          <ScalarProperty Name="emsal" ColumnName="emsal" />
+          <ScalarProperty Name="on_bahce" ColumnName="on_bahce" />
+          <ScalarProperty Name="yan_bahce1" ColumnName="yan_bahce1" />
+          <ScalarProperty Name="yan_bahce2" ColumnName="yan_bahce2" />
+          <ScalarProperty Name="arka_bahce" ColumnName="arka_bahce" />
+          <ScalarProperty Name="insaat_cephesi" ColumnName="insaat_cephesi" />
+          <ScalarProperty Name="insaat_derinligi" ColumnName="insaat_derinligi" />
+          <ScalarProperty Name="ifraz_sarti" ColumnName="ifraz_sarti" />
+          <ScalarProperty Name="aciklama1" ColumnName="aciklama1" />
+          <ScalarProperty Name="aciklama2" ColumnName="aciklama2" />
+          <ScalarProperty Name="aciklama3" ColumnName="aciklama3" />
+          <ScalarProperty Name="parsel_durumu" ColumnName="parsel_durumu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ozgurluk_katlar">
+      <EntityTypeMapping TypeName="bitirme_projesiModel.ozgurluk_katlar">
+        <MappingFragment StoreEntitySet="ozgurluk_katlar">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="kat_adedi" ColumnName="kat_adedi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
